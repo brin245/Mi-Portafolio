@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Bryan Bautista" />
+  <meta name="author" content="Brayhan Bautista" />
   <meta name="description" content="No más de 165 caracteres" />
   <meta name="keywords" content="programador, frontend, experiencia" />
   <meta name="theme-color" content="#09f" />
@@ -21,7 +21,7 @@
 
   <title>Portafolio</title>
 
-  <link rel="icon" href="assets/img/logo.png" type="image/png" />
+  <link rel="icon" href="assets/img/portafolio_logo.jpg" type="image/jpg" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <script type="module" src="assets/js/main.js"></script>
@@ -50,7 +50,7 @@
     <nav class="navbar grid--container flex--container">
       
       <a class="navbar__logo flex--container" href="#">
-        <img src="assets/img/logotipo.png" height="20%" width="20%"></i>Bryan</a>
+        <img src="assets/img/logotipo.png" height="20%" width="20%"></i>Brayhan</a>
 
       <div id="nav" class="navbar__menu">
         <a href="#close"><i class="bx bx-x btn__close navbar__icon flex--container"></i></a>
@@ -109,9 +109,9 @@
         </div>
 
         <ul class="home__social flex--container">
-          <li class="home__social-item">
+          <!-- <li class="home__social-item">
             <a class="home__social-link" href="https://www.linkedin.com/in/brayhan-aldair-bautista-palacios-686969246/" target="_blank"><i class="bx bxl-linkedin"></i></a>
-          </li>
+          </li> -->
           <li class="home__social-item">
             <a class="home__social-link" href="https://wa.me/51939963545?text=Tu%20Mensaje%20De%20Texto" target="_blank"><i class="bx bxl-whatsapp"></i></a>
           </li>
@@ -124,7 +124,7 @@
         </ul>
 
         <div class="home__info">
-          <h1 class="home__title">Hola , soy Bryan</h1>
+          <h1 class="home__title">Hola , soy Brayhan</h1>
 
           <p class="home__description">
             Soy desarrollador web, apasionado de las nuevas tecnologias y del coding.
@@ -132,7 +132,7 @@
         </div>
 
         <div class="home__buttons">
-          <a class="btn btn--primary" href="assets/img/img1.webp" title="Descargar mi CV" download="img1" rel="noreferrer nofollow">
+          <a class="btn btn--primary" href="assets/CV/CV-BRAYHAN  BAUTISTA PALACIOS.pdf" title="Descargar mi CV" download="img1" rel="noreferrer nofollow">
             Descargar CV
           </a>
         </div>
@@ -143,9 +143,9 @@
 
       <div class="about__container grid--container">
         <p class="about__description">
-       <strong>Hola soy Bryan Bautista</strong>, Soy un desarrollador frontend con amplios conocimientos,
+       <strong>Hola soy Brayhan Bautista</strong>, Soy un desarrollador frontend con amplios conocimientos,
         listo para aportar mis habilidades a una empresa que me brinde la oportunidad. Completé mis estudios de
-         desarrollo web frontend en Academlo, donde adquirí y complementé mis conocimientos previos. Durante mi formación, 
+         desarrollo web frontend en Academlo, donde adquirí y complementé mis conocimientos previos como estudiante de la carrera de Ingenieria de Sistemas. Durante mi formación, 
          he desarrollado habilidades en diversas tecnologías, incluyendo HTML, CSS, ReactJS, Tailwind, Bootstrap, y NodeJS,
           entre otras.
         </p>
@@ -267,6 +267,7 @@
                 </p>
               </div>
             </details>
+              
           </div>
         </div>
         <div class="skills__tags flex--container">
@@ -283,107 +284,84 @@
       </div>
     </section>
     <section id="projects" class="projects section">
-      <h2 class="section__title">Proyectos</h2>
-
-
-      <div class="projects__container grid--container">
-        <!-- Project 1 -->
-        <div class="projects__project">
-          <div class="projects__inner grid--container">
-            <div class="projects__image">
-              <img src="assets/img/project1.jpg" alt="project 1" title="Ecommerce Vanilla" />
+      <h2 class="pr">PROYECTOS</h2>
+      <div class="slider-container">
+          <div class="slide">
+            <div class="slide-image-wrapper">
+              <img src="/assets/img/proyectos/app_clima.png" alt="Proyecto 1" class="slide-image">
             </div>
-            <div class="projects__info">
-              <h3 class="projects__name">Proyecto 1</h3>
-              <p class="projects__description">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-
-              <div class="projects__buttons">
-                <button class="btn projects__button" type="button">
-                  VER DEMO
-                </button>
-                <button class="btn projects__button" type="button">
-                  VER CÓDIGO
-                </button>
+              <div class="slide-content">
+                  <h2 class="slide-title">App del Clima</h2>
+                  <p class="slide-description">Aplicación web interactiva que proporciona información meteorológica en tiempo real utilizando React. 
+                    La aplicación consume datos de una API climática para ofrecer pronósticos precisos y actualizados.</p>
+                  <div class="slide-buttons">
+                      <a href="https://looktheweatherr.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn">Ver Proyecto</a>
+                      <a href="https://github.com/brin245/app-del-clima" target="_blank" rel="noopener noreferrer" class="btn">Ver Código</a>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="projects__project">
-          <div class="projects__inner grid--container">
-            <div class="projects__image">
-              <img src="assets/img/project2.png" alt="project 1" title="Consumiendo API Pokemon con React" />
+          <div class="slide">
+            <div class="slide-image-wrapper">
+              <img src="/assets/img/proyectos/rick_andmorty.png" alt="Proyecto 2" class="slide-image">
             </div>
-
-            <div class="projects__info">
-              <h3 class="projects__name">Proyecto 2</h3>
-              <p class="projects__description">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-
-              <div class="projects__buttons">
-                <button class="btn projects__button" type="button">
-                  VER DEMO
-                </button>
-                <button class="btn projects__button" type="button">
-                  VER CÓDIGO
-                </button>
+              <div class="slide-content">
+                  <h2 class="slide-title">Buscador Api Rick and Morty</h2>
+                  <p class="slide-description">Plataforma dinámica que consume la api de Rick and Morty, potenciada por React y Redux.
+                     El proyecto destaca por su sofisticado sistema de búsqueda que permite filtrar personajes por estado, especie, género y ubicación.</p>
+                  <div class="slide-buttons">
+                      <a href="https://proyectrickand-morty.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn">Ver Proyecto</a>
+                      <a href="https://github.com/brin245/rick-and-mortyproyect" target="_blank" rel="noopener noreferrer" class="btn">Ver Código</a>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="projects__project">
-          <div class="projects__inner grid--container">
-            <div class="projects__image">
-              <img src="assets/img/project3.jpg" alt="project 1" title="CRUD con React" />
+          <div class="slide">
+            <div class="slide-image-wrapper">
+              <img src="/assets/img/proyectos/crud_usuarios.png" alt="Proyecto 3" class="slide-image">
             </div>
-
-            <div class="projects__info">
-              <h3 class="projects__name">Proyecto 3</h3>
-              <p class="projects__description">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-
-              <div class="projects__buttons">
-                <button class="btn projects__button" type="button">
-                  VER DEMO
-                </button>
-                <button class="btn projects__button" type="button">
-                  VER CÓDIGO
-                </button>
+              <div class="slide-content">
+                  <h2 class="slide-title">Crud de Usuarios</h2>
+                  <p class="slide-description">Sistema de gestión de usuarios que permite crear, visualizar,
+                     actualizar y eliminar perfiles con soporte para imágenes. Destaca por su interfaz limpia y flujo de trabajo intuitivo.</p>
+                  <div class="slide-buttons">
+                      <a href="https://crud-work.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn" >Ver Proyecto</a>
+                      <a href="https://github.com/brin245/proyect-crud" target="_blank" rel="noopener noreferrer" class="btn">Ver Código</a>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
-        <!-- Project 4 -->
-        <div class="projects__project">
-          <div class="projects__inner grid--container">
-            <div class="projects__image">
-              <img src="assets/img/project4.png" alt="project 1" title="Aplicación del tiempo con React" />
+          <div class="slide">
+            <div class="slide-image-wrapper">
+              <img src="/assets/img/proyectos/BookingApp.png" alt="Proyecto 4" class="slide-image">
             </div>
-
-            <div class="projects__info">
-              <h3 class="projects__name">Proyecto 4</h3>
-              <p class="projects__description">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              </p>
-
-              <div class="projects__buttons">
-                <button class="btn projects__button" type="button">
-                  VER DEMO
-                </button>
-                <button class="btn projects__button" type="button">
-                  VER CÓDIGO
-                </button>
+              <div class="slide-content">
+                  <h2 class="slide-title">Booking App</h2>
+                  <p class="slide-description">Sistema completo de reservas hoteleras que consume una API de servicios hoteleros, implementando Redux para la gestión del estado y rutas protegidas 
+                    para la seguridad del usuario. Combina búsqueda avanzada, autenticación robusta y gestión de reseñas en una experiencia fluida.</p>
+                  <div class="slide-buttons">
+                      <a href="https://hotelsview.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn">Ver Proyecto</a>
+                      <a href="https://github.com/brin245/Hotels-app" target="_blank" rel="noopener noreferrer" class="btn">Ver Código</a>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
+          <div class="slide">
+            <div class="slide-image-wrapper">
+              <img src="/assets/img/proyectos/bienes_raices.png" alt="Proyecto 5" class="slide-image">
+            </div>
+              <div class="slide-content">
+                  <h2 class="slide-title">Bienes Raices</h2>
+                  <p class="slide-description">Plataforma integral de bienes raíces desarrollada en PHP que conecta propietarios con compradores potenciales. 
+                    Combina un sistema de anuncios dinámico con blog informativo y comunicación directa con asesores inmobiliarios.</p>
+                  <div class="slide-buttons">
+                    
+                      <a href="https://github.com/brin245/bienes-raices" target="_blank" rel="noopener noreferrer" class="btn">Ver Código</a>
+                  </div>
+              </div>
+          </div>
+          <div class="slider-controls">
+              <button class="control-btn" id="prevBtn">Anterior</button>
+              <button class="control-btn" id="nextBtn">Siguiente</button>
+          </div>
       </div>
-    </section>
+  </section>
     <section id="contact" class="contact section">
       <h2 class="section__title">Contacto</h2>
 
@@ -470,7 +448,7 @@
   <footer class="footer section">
     <div class="footer__container grid--container">
       <div class="footer__info">
-        <h3 class="footer__title">Bryan Bautista</h3>
+        <h3 class="footer__title">Brayhan Bautista</h3>
         <p class="footer__description">
           Soy desarrollador web, apasionado de las nuevas
            tecnologias y del coding.
@@ -497,8 +475,8 @@
           </li>
 
           <li class="footer__social-item">
-            <a class="footer__social-link" href="https://www.linkedin.com/in/brayhan-aldair-bautista-palacios-686969246/" target="_blank" rel="noreferrer nofollow"><i
-                class="bx bxl-linkedin"></i></a>
+            <!-- <a class="footer__social-link" href="https://www.linkedin.com/in/brayhan-aldair-bautista-palacios-686969246/" target="_blank" rel="noreferrer nofollow"><i
+                class="bx bxl-linkedin"></i></a> -->
           </li>
         </ul>
       </div>

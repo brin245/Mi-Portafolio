@@ -26,7 +26,7 @@ function sendEmail() {
 				.then(openModal());
 		}
 	});
-}
+} 
 
 closeButton.addEventListener('click', closeModal);
 export default sendEmail;

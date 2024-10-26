@@ -30,6 +30,9 @@ Sombras con CSS: https://getcssscan.com/css-box-shadow-examples
 	--bg-color-section1: light-dark(#eee, #7da7ca);
 	--bg-color-section2: light-dark(#fafafa, #6a6a6a);
 	--bg-color-buttons: light-dark(#e0e0e0, #6a6a6a);
+	--text-color: #333;
+	--slide-bg: #fff;
+	--slide-shadow: rgba(0, 0, 0, 0.1);
 	/* #7da7ca */
 	/* Typografia  */
 	--normal-font-size: 16px;
@@ -513,31 +516,123 @@ html {
 		border-color: transparent;
 	}
 }
-/*********************** 	 **********************/
+/*********************** ABOUT 	 **********************/
 .about {
-	background-color: var(--bg-color-section2);
-	overflow: hidden;
-	.about__container {
-		.about__description {
-			text-align: center;
-		}
-		.about__cards {
-			margin-top: 2rem;
-			flex-direction: column;
-			gap: 2rem;
-			.about__card {
-				background-color: var(--bg-color-section1);
-				padding: 2rem;
-				border-radius: 5px;
-				box-shadow: var(--box-shadow);
-				.about__card--img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
-			}
-		}
+    background-color: var(--bg-color-section2);
+    overflow: hidden;
+    padding: 2rem 1rem;
+    width: 100%;
+}
+
+.about__container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__description {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Nuevo código para agrupar los contenedores */
+.agrupador {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 15px;
+}
+
+.container1 {
+    flex: 1;
+    max-width: 600px;
+    min-width: 300px;
+}
+
+.container {
+    flex: 1;
+    max-width: 600px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Media queries para hacer responsivo el diseño */
+@media (max-width: 768px) {
+    .agrupador {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container1,
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .about__description {
+        font-size: 0.95rem;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__container {
+        padding: 0;
+    }
+    
+    .about__description {
+        font-size: 0.9rem;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .agrupador {
+        gap: 1rem;
+        padding: 0 10px;
+    }
+}
+
+/* iPhone 12 Pro y similares */
+@media screen and (width >= 385px) and (width <= 395px) {
+    .container1 {
+        transform: translateX(-20px);
+    }
+	.container{
+		transform: translateX(-25px);
 	}
+}
+/*Iphone SE*/
+@media screen and (width >= 375px) and (width <= 385px) {
+    .container1 {
+        transform: translateX(-15px);
+    }
+	.container{
+		transform: translateX(-36px);
+	}
+}
+
+/* Samsung Galaxy S8+ y similares */
+@media screen and (width >= 355px) and (width <= 375px) {
+    .container1,
+    .container {
+        transform: translateX(-40px);
+    }
 }
 /*********************** SKILLS **********************/
 .skills {
@@ -610,41 +705,7 @@ html {
 	}
 }
 /*********************** PROJECTS **********************/
-.projects {
-	background-color: var(--bg-color-section2);
-	.projects__container {
-		gap: 2rem;
-		.projects__inner {
-			margin: 0;
-			.projects__image {
-				border-radius: 5px;
-				img {
-					width: 100%;
-					height: auto;
-					object-fit: cover;
-					border-radius: 5px;
-					box-shadow: 6px 11px 13px 0 #0000002e;
-					animation: showing linear both;
-					animation-timeline: view();
-					animation-range: entry 25% cover 35%;
-				}
-			}
-			.projects__info {
-				padding: 1rem;
-				.projects__buttons {
-					flex-wrap: wrap;
-					gap: 1rem;
-					.projects__button {
-						color: var(--bg-color-section2);
-						background-color: var(--primary-color);
-						padding: 0.75rem 1.5rem;
-						font-size: var(--small-font-size);
-					}
-				}
-			}
-		}
-	}
-}
+
 
 @keyframes showing {
 	from {
@@ -908,6 +969,8 @@ html {
 }
 
 .slider {
+	/* flex-wrap: wrap;
+	align-content: center; */
     display: flex;
     aspect-ratio: 16 / 11;
     overflow-x: auto;
@@ -1034,13 +1097,270 @@ a {
   }
   
   a:visited {
-	color: #333333; /* Color oscuro para los enlaces visitados */
+	color: #333333; 
   }
   
   a:hover {
-	color: #555555; /* Color para cuando el enlace está en estado hover */
+	color: #555555; 
   }
   
   a:focus, a:active {
-	color: #777777; /* Color para cuando el enlace está enfocado o activo */
+	color: #777777; 
   }
+
+  .colored {
+	background-color: #000000;
+  }
+
+
+
+
+	/* slider proyectos */
+	/* styles.css */
+	.projects.section {
+		padding: 2rem 1rem;
+		background-color: #f0f0f0;
+		width: 100%;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+ 
+	
+	.slider-container {
+		width: 100%;
+		max-width: 1200px;
+		height: 600px;
+		position: relative;
+		overflow: hidden;
+		background: white;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+	
+	.slide {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: flex;
+		transition: transform 0.5s ease-in-out;
+	}
+	
+	.slide-image-wrapper {
+		flex: 1;
+		min-width: 50%;
+		background: #f8f8f8;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1rem;
+	}
+	
+	.slide-image {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+	}
+	
+	.slide-content {
+		flex: 1;
+		padding: 2rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1.5rem;
+		background: white;
+		overflow-y: auto;
+	}
+	
+	.slide-title {
+		font-size: 1.75rem;
+		color: #333;
+		margin: 0;
+	}
+	
+	.slide-description {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: #666;
+		margin: 0;
+	}
+	
+	.slide-buttons {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin-bottom: 3.5rem; /* Espacio para los controles del slider */
+	}
+	
+	.btn {
+		padding: 0.75rem 1.5rem;
+		background-color: #007bff;
+		color: white;
+		text-decoration: none;
+		border-radius: 0.25rem;
+		transition: background-color 0.3s;
+		font-size: 1rem;
+		border: none;
+		cursor: pointer;
+	}
+	
+	.btn:hover {
+		background-color: #0056b3;
+	}
+	
+	.slider-controls {
+		position: absolute;
+		bottom: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 1rem;
+		z-index: 10;
+		background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+		padding: 0.5rem;
+		border-radius: 0.25rem;
+	}
+	
+	.control-btn {
+		padding: 0.5rem 1rem;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		border-radius: 0.25rem;
+		cursor: pointer;
+		font-size: 0.875rem;
+	}
+	
+	@media (max-width: 768px) {
+		.slider-container {
+			height: 90vh;
+			margin: 1rem;
+		}
+	
+		.slide {
+			flex-direction: column;
+		}
+	
+		.slide-image-wrapper {
+			height: 40%;
+			min-width: 100%;
+		}
+	
+		.slide-content {
+			height: 60%;
+			padding: 1.5rem 1.5rem 4rem 1.5rem; /* Aumentado el padding inferior */
+			position: relative; /* Para posicionamiento relativo */
+		}
+	
+		.slide-title {
+			font-size: 1.5rem;
+		}
+	
+		.slide-description {
+			font-size: 0.95rem;
+		}
+	
+		.slide-buttons {
+			margin-bottom: 2.5rem; /* Espacio para los controles */
+		}
+	
+		.btn {
+			padding: 0.6rem 1.2rem;
+			font-size: 0.95rem;
+		}
+	
+		.slider-controls {
+			bottom: 0.5rem; /* Ajustado para estar más cerca del borde */
+			width: auto; /* Ancho automático */
+			padding: 0.4rem;
+			background-color: transparent; /* Fondo transparente en móvil */
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.slider-container {
+			height: 85vh;
+			margin: 0.5rem;
+		}
+	
+		.slide-content {
+			padding: 1rem 1rem 4rem 1rem; /* Aumentado el padding inferior */
+		}
+	
+		.slide-title {
+			font-size: 1.25rem;
+		}
+	
+		.slide-buttons {
+			gap: 0.5rem;
+			margin-bottom: 3rem; /* Más espacio para los controles */
+		}
+	
+		.btn {
+			padding: 0.5rem 1rem;
+			font-size: 0.9rem;
+		}
+	
+		.slider-controls {
+			bottom: 0.75rem;
+		}
+	
+		.control-btn {
+			padding: 0.4rem 0.8rem;
+			font-size: 0.8rem;
+		}
+	}
+
+
+
+
+.slide{
+	color: var(--bg-color-section2);
+	/* background-color: var(--bg-color-section2); */
+
+}
+
+.projects  {
+	background-color: var(--bg-color-section2);
+}
+
+.pr {
+    text-align: center;
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Opcional: Puedes agregar un subrayado decorativo */
+.pr::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: #007bff;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .pr {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pr {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+}

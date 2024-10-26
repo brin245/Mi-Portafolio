@@ -43,3 +43,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(changeSlide, 3000); // Cambia cada 3 segundos
 });
+
+// let currentIndex = 0;
+// const slider = document.getElementById("slider");
+// const totalProjects = document.querySelectorAll(".project").length;
+
+// function autoSlide() {
+//   currentIndex = (currentIndex + 1) % totalProjects; // Rotate through projects
+//   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+// }
+
+// setInterval(autoSlide, 3000); // Change project every 3 seconds
+
+// script.js
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentSlide = 0;
+
+function showSlide(n) {
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - n)}%)`;
+    });
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
+
+showSlide(currentSlide);
+
+setInterval(nextSlide, 5000); // Cambiar slide cada 5 segundos
