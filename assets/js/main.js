@@ -44,16 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(changeSlide, 3000); // Cambia cada 3 segundos
 });
 
-// let currentIndex = 0;
-// const slider = document.getElementById("slider");
-// const totalProjects = document.querySelectorAll(".project").length;
-
-// function autoSlide() {
-//   currentIndex = (currentIndex + 1) % totalProjects; // Rotate through projects
-//   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-// }
-
-// setInterval(autoSlide, 3000); // Change project every 3 seconds
 
 // script.js
 const slides = document.querySelectorAll('.slide');
@@ -83,3 +73,29 @@ nextBtn.addEventListener('click', nextSlide);
 showSlide(currentSlide);
 
 setInterval(nextSlide, 5000); // Cambiar slide cada 5 segundos
+
+
+/*Para cambiar el script y este oscuro directamente */
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeToggle = document.getElementById("darkmode-toggle");
+  const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+  // Aplica modo oscuro si es preferencia del usuario o si no hay preferencia guardada
+  const currentTheme = localStorage.getItem("theme");
+
+  if (currentTheme === "dark" || (!currentTheme && prefersDarkScheme.matches)) {
+    document.body.classList.add("dark-theme");
+    darkModeToggle.checked = true; // Marca el toggle para reflejar el modo oscuro
+  }
+
+  // Agrega un evento para el toggle de modo oscuro
+  darkModeToggle.addEventListener("change", function () {
+    if (darkModeToggle.checked) {
+      document.body.classList.add("dark-theme");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.body.classList.remove("dark-theme");
+      localStorage.setItem("theme", "light");
+    }
+  });
+});
